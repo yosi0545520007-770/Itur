@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>תוצאות גאוקודינג</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>תוצאות גאוקודינג</h1>
+        <p class="muted">זוהו {{ count }} שורות. מוצגות עד 100 הראשונות.</p>
+      </header>
+
+      <div class="row">
+        <form action="/download" method="post">
+          <input type="hidden" name="raw_text" value="{{ raw_text|e }}">
+          <input type="hidden" name="delimiter" value="{{ delimiter }}">
+          <input type="hidden" name="address_column" value="{{ address_column }}">
+          <input type="hidden" name="has_header" value="{{ 'true' if has_header else 'false' }}">
+          <button type="submit">הורד CSV</button>
+        </form>
+        <a href="/"><button>חזרה</button></a>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            {% for h in header %}<th>{{ h }}</th>{% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in rows %}
+            <tr>
+              {% for cell in row %}
+                <td>{{ '' if cell is none else cell }}</td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+

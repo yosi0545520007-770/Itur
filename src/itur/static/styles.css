@@ -1,0 +1,12 @@
+body{font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;margin:2rem}
+.container{max-width:1000px;margin:auto}
+header{margin-bottom:1.5rem}
+.muted{color:#666}
+form label{display:block;margin-top:.5rem}
+input[type=file],input[type=text],select{padding:.4rem}
+button{padding:.5rem 1rem;margin-top:1rem}
+table{border-collapse:collapse;width:100%;margin-top:1rem}
+th,td{border:1px solid #ddd;padding:.5rem;text-align:left}
+thead th{background:#f2f2f2}
+.row{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+

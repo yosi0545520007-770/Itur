@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Itur Geocoder</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Itur Geocoder</h1>
+        <p class="muted">המרת כתובות לנקודות ציון (lat/lon) מקובץ CSV</p>
+      </header>
+      <form action="/geocode" method="post" enctype="multipart/form-data">
+        <label>קובץ קלט (CSV):<br><input type="file" name="file" accept=".csv" required></label>
+        <div class="row">
+          <label>מפריד:<br>
+            <select name="delimiter">
+              <option value="," selected>פסיק ,</option>
+              <option value=";">נקודה-פסיק ;</option>
+              <option value="\t">טאב \t</option>
+              <option value="auto">זיהוי אוטומטי</option>
+            </select>
+          </label>
+          <label>שם עמודת כתובת (רשות):<br>
+            <input type="text" name="address_column" placeholder="address">
+          </label>
+        </div>
+        <button type="submit">המרה לנ"צ</button>
+      </form>
+    </div>
+  </body>
+</html>
+

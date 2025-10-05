@@ -1,0 +1,11 @@
+[project]
+name = "itur"
+version = "0.1.0"
+dependencies = [
+    "pandas",
+    "openpyxl",
+    "geopy",
+    "streamlit",
+    "pydeck",
+    "googlemaps",
+]
