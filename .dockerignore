@@ -1,0 +1,11 @@
+﻿__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.git/
+.gitignore
+firebase-hosting/
+.streamlit/
+.vscode/
+.DS_Store
+

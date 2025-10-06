@@ -1,0 +1,6 @@
+﻿pandas
+openpyxl
+geopy
+streamlit
+pydeck
+googlemaps
