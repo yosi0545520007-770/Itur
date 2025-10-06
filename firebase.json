@@ -6,6 +6,15 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "cleanUrls": true
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "**",
+        "run": {
+          "serviceId": "itur-streamlit",
+          "region": "us-central1"
+        }
+      }
+    ]
   }
 }
